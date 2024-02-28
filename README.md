@@ -113,7 +113,7 @@ check logs using below command and replace "12345" with your input, you will see
 
 
 
-2. 2. Hardcoding Issues – Part 1
+2. Hardcoding Issues – Part 1
 
 this is hardcoding challenge this mean the Vendor Key is hardcoded in the application. In order to get the hardcoded key we need to do Reverse Engineering of this application.
 
@@ -123,6 +123,7 @@ this is hardcoding challenge this mean the Vendor Key is hardcoded in the applic
 so go to your jd-gui screen and you will see harcoreded credentials here.
 
 ![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/2.1.png)
+
 
 3. Insecure Data Storage – Part 1:
 
@@ -224,8 +225,6 @@ The app is storing credentials in external storage.
 We got the location, now access them from shell.
 
 ![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/6.2.png)
-
-
 
 
 
