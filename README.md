@@ -95,7 +95,7 @@ use below command to install apk into emulator.
 #
 ## Exploitation:
 
-![DIVA](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/0.png)
 
 
 
