@@ -1,4 +1,4 @@
-Here's a guide to get started with solving the challenges in DIVA, including the prerequisites you mentioned:
+Here's a guide to get started with solving the challenges in DIVA, including the prerequisites mentioned:
 
 ### Prerequisites
 Before you dive into solving challenges with DIVA, ensure you have the following tools installed and ready:
