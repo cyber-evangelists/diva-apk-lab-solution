@@ -1,5 +1,4 @@
-
-The DIVA (Damn Insecure and Vulnerable App) is designed as a learning tool for security enthusiasts to test and improve their skills in mobile security, particularly focusing on Android apps. It provides a set of challenges that simulate common vulnerabilities found in Android applications. Here's a guide to get started with solving the challenges in DIVA, including the prerequisites you mentioned:
+Here's a guide to get started with solving the challenges in DIVA, including the prerequisites you mentioned:
 
 ### Prerequisites
 Before you dive into solving challenges with DIVA, ensure you have the following tools installed and ready:
