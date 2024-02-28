@@ -103,37 +103,44 @@ use below command to install apk into emulator.
    
 enter any number in input filed  and click on `checkout`
 
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/1.png)
 
 
 check logs using below command and replace "12345" with your input, you will see your input reflected in logs
+
+
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/1.1.png)
+
 
 
 2. 2. Hardcoding Issues – Part 1
 
 this is hardcoding challenge this mean the Vendor Key is hardcoded in the application. In order to get the hardcoded key we need to do Reverse Engineering of this application.
 
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/2.png)
 
 
 so go to your jd-gui screen and you will see harcoreded credentials here.
 
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/2.1.png)
 
 3. Insecure Data Storage – Part 1:
 
 Enter your creds in input fileds.
 
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/3.png)
 
 
 
 review the source code of this activity. We can see that credentials are stored in Shared Preferences.
 
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/3.1.png)
 
 
 
+Now go to this folder and you will see credentials.
 
-Now go to this folde and you will see credentials.
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/3.2.png)
 
 
 4. Insecure Data Storage – Part 2:
@@ -141,19 +148,16 @@ Now go to this folde and you will see credentials.
 This is similar challenge to previous one but credentials are stored in different location.
 
 
-
-
-
 Enter your creds in input fileds.
 
 
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/4.png)
 
 
 This time credentials were stored in database ids2 and in its myuser table
 
 
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/4.1.png)
 
 
 
@@ -161,9 +165,7 @@ This time credentials were stored in database ids2 and in its myuser table
 Goto to database folder in /data/data and you will see your credentials.
 
 
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/4.2.png)
 
 
 
@@ -172,7 +174,7 @@ Goto to database folder in /data/data and you will see your credentials.
 Enter the credentials from application.
 
 
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/5.png)
 
 
 
@@ -182,7 +184,7 @@ Enter the credentials from application.
 The credentials were stored in temporary file
 
 
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/5.1.png)
 
 
 
@@ -194,7 +196,7 @@ The credentials were stored in temporary file
 Let’s access those temporary file from shell.
 
 
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/5.2.png)
 
 
 
@@ -209,39 +211,19 @@ Let’s access those temporary file from shell.
 Enter the credentials from application.
 
 
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/6.png)
 
 
 
 The app is storing credentials in external storage.
 
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/6.1.png)
 
 
 
+We got the location, now access them from shell.
 
-
-
-
-
-
-
-
-
-We got the location, now access them from shell
-
-
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/6.2.png)
 
 
 
@@ -251,7 +233,7 @@ We got the location, now access them from shell
 
  Now try to enter admin in input field, you will get details about admin user.
 
- 
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/7.png) 
  
  
  Hmmm, it is looking fetching data from database, let's try sql injection
@@ -259,27 +241,29 @@ We got the location, now access them from shell
 
 
 
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/7.1.png)
 
 
 
 sql injection was successful, we got all users detail.
 
-8. Input Validation Issues – Part 2:
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/7.2.png)
 
-In this challenge we have to access local files using URL
+
+
+8. Input Validation Issues – Part 2:
+   
+
+In this challenge we have to access local files using URL,
 
 Let’s try to get file info from local storage other then valid url.
 
 
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/8.png)
 
 
-
-
-
-
-
-
+**Note:** the file you are trying to read will also exist in /sdcard, if not create one for pratice.
+ 
 
 9. Access Control Issues – Part 1:
 
@@ -289,43 +273,25 @@ Accessing credentials from “View API Credentials” Button is completely legal
 
 
 
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/9.png)
 
 
 
 we look into "AndroidManifest.xml" for any exported android component, if any component is exported then it can be accessible outside the app.
 
+
 we got one activity exported in "AndroidManifest.xml"
 
 
-
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/9.1.png)
 
 
 
 Lets open the activity outside the app context.
-We can see activity launched with sensitive activity with directly interacting with app.
+We can see activity launched with sensitive activity without directly interacting with app.
 
 
-
-
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/9.2.png)
 
 
 
@@ -334,21 +300,14 @@ We can see activity launched with sensitive activity with directly interacting w
 This is same as above Vulnerablebut there is a slight twist.
 
 
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/10.png)
 
 
 
 We see into "AndroidManifest.xml" again and found another exported activity.
 
 
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/10.1.png)
 
 
 
@@ -356,11 +315,7 @@ Now try to start this activity.
 
 
 
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/10.2.png)
 
 
 Oh no its asking for pin, we have to bypass this pin to access sensitive activity.
@@ -368,22 +323,11 @@ Oh no its asking for pin, we have to bypass this pin to access sensitive activit
 
 
 
+Now look into decompiled code using jd-gui, we can see that we have to provide some string and boolean value, 
+but which is.
 
 
-
-
-
-
-
-
-Now look into decompiled code using jd-gui, we can see that we have to provide some string and boolean value, but whic is.
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/10.3.png)
 
 
 
@@ -394,16 +338,7 @@ We see `APICreds2Activity` (which is much silialr as intent defined in `AndroidM
 we got some number in `getString()` function.
 
 
-
-
-
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/10.4.png)
 
 
 
@@ -411,31 +346,15 @@ There is references in android in R.class, we check this for any reference relat
 
 
 
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/10.5.png)
 
 
 
 
+Now its time to open the activity, Now arrange all got info into one command to get access.
 
 
-
-
-
-
-
-
-
-
-Now its time to open the activity, Now arrange all got info into one command to get success.
-
-
-
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/10.6.png)
 
 
 
@@ -447,36 +366,19 @@ Now again come to `AndoirdManifest.xml` and this time we see another component e
 
 
 
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/11.png)
 
 
 
+Now check decompiled code for this `notesprovider`. 
+
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/11.1.png)
 
 
+We got content provider uri in decompiled code.
 
 
-
-
-
-
-
-
-
-Now check decompiled code for this `notesprovider`. We got content provider uri in decompiled code.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/11.2.png)
 
 
 
@@ -484,31 +386,23 @@ Now lets try to acees it otside the app.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/11.3.png)
 
 
 
 12. Hardcoding Issues – Part2:
 
 
-We have to find vendor pin in order to access it, look into the decompiled code, we can see its accesing `Divajni` class, click on it.
+We have to find vendor pin in order to access it,
+
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/12.png)
 
 
 
+We can see its accesing `Divajni` class, click on it.
 
 
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/12.1.png)
 
 
 
@@ -516,14 +410,7 @@ We have to find vendor pin in order to access it, look into the decompiled code,
 We can see in this code that , it is accessing divajni library.
 
 
-
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/12.2.png)
 
 
 
@@ -533,19 +420,7 @@ Now goto `diva-lab1/lib/<anyfolder>` and you will got `libdivajni.so` file.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/12.3.png)
 
 
 
@@ -553,32 +428,13 @@ Now goto `diva-lab1/lib/<anyfolder>` and you will got `libdivajni.so` file.
 Now string to it and you got some string different then others, this string is a key to success.
 
 
-
-
-
-
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/12.4.png)
 
 
 
 Input htis key into the app.
 
-
-
-
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/12.5.png)
 
 
 
@@ -587,88 +443,13 @@ Input htis key into the app.
 
 We have to crash this app by Dosing it,
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/13.png)
 
 
 
 
 NOw generate 60 characters and add into the input filed and click on button.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/13.1.png)
 
 
