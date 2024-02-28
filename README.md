@@ -95,6 +95,10 @@ use below command to install apk into emulator.
 #
 ## Exploitation:
 
+![DIVA](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
+
 1. Insecure Logging:
    
 enter any number in input filed  and click on `checkout`
