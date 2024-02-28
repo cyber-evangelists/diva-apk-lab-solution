@@ -106,7 +106,7 @@ enter any number in input filed  and click on `checkout`
 ![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/1.png)
 
 
-check logs using below command and replace "12345" with your input, you will see your input reflected in logs
+check logs using below command and replace "123456" with your input, you will see your input reflected in logs
 
 
 ![DIVA](https://github.com/cyber-evangelists/diva-apk-lab-solution/blob/main/screenshots/1.1.png)
