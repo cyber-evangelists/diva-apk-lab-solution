@@ -35,7 +35,7 @@ To solve a challenge, you might need to reverse-engineer the app, inspect its co
 
 2. **Convert and Inspect Code**:
    - Use Dex2Jar to convert the APK's dex files into a Java jar file.
-   - Command: `dex2jar diva.apk`
+   - Command: `d2j-dex2jar classes.dex`
    - Then, use JD-GUI to open the jar file and inspect the decompiled source code for vulnerabilities.
 
 3. **Solve Challenges**:
