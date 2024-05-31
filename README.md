@@ -93,7 +93,7 @@ Solving challenges in DIVA is a hands-on way to improve your understanding of mo
 
 you can download it from above link.
 
-install android emulator in genymotion and setup emulator to proxy through the burp suite, you can take help from [here](https://www.youtube.com/watch?v=aqqdy7460yo)
+install android emulator in genymotion and setup emulator to proxy through the burp suite, you can take help from [here](https://www.youtube.com/watch?v=aqqdy7460yo) (for burp proxy setting up) 
 
 ### apktool:
     apt install apktool
